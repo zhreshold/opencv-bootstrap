@@ -49,6 +49,7 @@ $cd /build
 
 # for windows
 $create_vs2013_project.bat
+# Or you can double click on the bat file to run it in explorer
 
 # for other OS
 $./build_script.sh
