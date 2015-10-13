@@ -1,7 +1,7 @@
 # OpenCV-Bootstrap
 Set up OpenCV c++ project in a few seconds, good for Visual Studio in Windows/OS X/Linux, etc
 
-## What's new
+### What's new
 - More elegant way to organize code
 - Add Eclipse CDT generator on unix-like systems 
 
@@ -11,6 +11,8 @@ This is a CMake powered bootstrap project for everyone who need to set up OpenCV
 With OpenCV-Bootstrap, one can create a valid project in just a few seconds if prerequisites are already satisfied.
 
 ## Why 
+*Keyword: automation.*
+
 Config OpenCV correctly is a trivial but complicated work, even an expert on this area may take a while and googling around to be able to set up all the include directories and link targets. 
 
 It is even more frustrating in Visual Studio, where you have to figure out the different link targets according to OpenCV version and debug/release mode. 
@@ -37,7 +39,9 @@ You can skip this step if you have CMake and OpenCV installed.
     - Manually build opencv(Let BUILD_SHARED_LIBS=ON to build shared library, OFF for static library)
 	
 #### Organize source code
-- If you don't have existing code, just wanna try it, then skip this step
+
+If you don't have existing code, just wanna try it, then skip this step
+
 - Put headers to include in /path/to/project/include, remember to use **"#include \<xxx.h\>"** for these headers. I usually put 3rdparty template libraries(actually any header-only libraries) and my own API fuctions in this folder. 
 - Put all source codes (headers and sources) in /path/to/project/src, use **"#include "xxx.h"** for these headers
 
@@ -70,6 +74,8 @@ $./build_script.sh
 ```
 When finished, visual studio project will be created in build/vc12 folder. For other OS, the makefile and build binary will be created within build folder.
 
+---
+
 #### Some notes
 ##### Static or Shared
 I choose to link opencv static libraries by default
@@ -84,9 +90,9 @@ I choose to link opencv static libraries by default
 Turn on static build is enough for windows, however, for linux for example, this flag has no effect. Let BUILD_SHARED_LIBS=OFF when building OpenCV.
 
 ##### OpenCV path in windows
-In traditional tutorials, they will tell you to add opencv build path to system PATH, so that you can run program against the dlls. 
+In traditional tutorials, they tell you to add opencv build path to system PATH, so that you can run program against the dlls. 
 
-The story is a little bit different here, to build the project, you don't even have to do that, the project will handle the opencv_dir from anywhere on disk as long as you set **CUSTOM_OPENCV_DIR**. 
+The story is a little bit different here, to build the project, you don't even have to do that, the script will handle the opencv_dir from anywhere on disk as long as you set **CUSTOM_OPENCV_DIR**. 
 
 - If you build using static library, after build, it is good to run anywhere.
 - If you build using dynamic library as usual, you have either **copy opencv_xxx.dll to the same directory** or **add opencv build dir to system PATH**, because the binary file need to 'see' the dlls.
