@@ -38,8 +38,8 @@ You can skip this step if you have CMake and OpenCV installed.
 	
 #### Organize source code
 - If you don't have existing code, just wanna try it, then skip this step
-- Put headers to include in /path/to/project/include, remember to use "#include <xxx.h>" for these headers. I usually put 3rdparty template libraries(actually any header-only libraries) and my own API fuctions in this folder. 
-- Put all source codes (headers and sources) in /path/to/project/src, use "#include "xxx.h" for these headers
+- Put headers to include in /path/to/project/include, remember to use **"#include \<xxx.h\>"** for these headers. I usually put 3rdparty template libraries(actually any header-only libraries) and my own API fuctions in this folder. 
+- Put all source codes (headers and sources) in /path/to/project/src, use **"#include "xxx.h"** for these headers
 
 #### Config
 Open CMakeLists.txt using text editor in /path/to/project/build. There are only four parameters.
