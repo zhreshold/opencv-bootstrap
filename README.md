@@ -1,6 +1,10 @@
 # OpenCV-Bootstrap
 Set up OpenCV c++ project in a few seconds, good for Visual Studio in Windows/OS X/Linux, etc
 
+## What's new
+- More elegant way to organize code
+- Add Eclipse CDT generator on unix-like systems 
+
 ## What
 This is a CMake powered bootstrap project for everyone who need to set up OpenCV C++ environment. 
 
@@ -31,6 +35,11 @@ You can skip this step if you have CMake and OpenCV installed.
   2. Unix-like OS:
     - Use apt-get, yum or homebrew to get opencv directly, e.g. sudo apt-get install opencv-dev
     - Manually build opencv(Let BUILD_SHARED_LIBS=ON to build shared library, OFF for static library)
+	
+#### Organize source code
+- If you don't have existing code, just wanna try it, then skip this step
+- Put headers to include in /path/to/project/include, remember to use "#include <xxx.h>" for these headers. I usually put 3rdparty template libraries(actually any header-only libraries) and my own API fuctions in this folder. 
+- Put all source codes (headers and sources) in /path/to/project/src, use "#include "xxx.h" for these headers
 
 #### Config
 Open CMakeLists.txt using text editor in /path/to/project/build. There are only four parameters.
@@ -47,11 +56,16 @@ By default, windows users have to change **CUSTOM_OPENCV_DIR**, linux users don'
 $cd /path/to/project
 $cd /build
 
-# for windows
+# for VS project on windows
 $create_vs2013_project.bat
 # Or you can double click on the bat file to run it in explorer
 
-# for other OS
+# for Eclipse CDT on unix-like OS
+$./generate_eclipse_cdt.sh
+# import project as a makefile project in eclipse
+# "File -> Import -> Existing code as Makefile project" -> navigate to /path/to/proj/build/cdt4
+
+# for others using script
 $./build_script.sh
 ```
 When finished, visual studio project will be created in build/vc12 folder. For other OS, the makefile and build binary will be created within build folder.

@@ -1,4 +1,5 @@
 #include "test.hpp"
+#include <test_include.h>
 #include <opencv2/opencv.hpp>
 
 using namespace cv;
