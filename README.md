@@ -35,8 +35,8 @@ You can skip this step if you have CMake and OpenCV installed.
   1. Windows:
     - Download the pre-complied zip file from the official website, extract to anywhere you like, e.g. "c:\\dev\\opencv"
   2. Unix-like OS:
-    - Use apt-get, yum or homebrew to get opencv directly, e.g. sudo apt-get install opencv-dev
-    - Manually build opencv(Let BUILD_SHARED_LIBS=ON to build shared library, OFF for static library)
+    - Use apt-get, yum or homebrew to get opencv directly, e.g. sudo apt-get install opencv-dev. All set.
+    - Or, if you are familiar enough, manually build opencv(Let BUILD_SHARED_LIBS=ON to build shared library, OFF for static library)
 	
 #### Organize source code
 
