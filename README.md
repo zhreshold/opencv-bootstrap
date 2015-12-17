@@ -2,6 +2,7 @@
 Set up OpenCV c++ project in a few seconds, good for Visual Studio in Windows/OS X/Linux, etc
 
 ### What's new
+- Add script for creating vs2015 project
 - More elegant way to organize code
 - Add Eclipse CDT generator on unix-like systems 
 
