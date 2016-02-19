@@ -2,6 +2,7 @@
 Set up OpenCV c++ project in a few seconds, good for Visual Studio in Windows/OS X/Linux, etc
 
 ### What's new
+- Release version for windows is now available! One can use the tool without having to download and install CMake. [Download](https://github.com/ZhreShold/opencv-bootstrap/releases/download/v0.1-beta/opencv-bootstrap-0.1-beta.zip)
 - Add script for creating vs2015 project
 - More elegant way to organize code
 - Add Eclipse CDT generator on unix-like systems 
@@ -105,6 +106,6 @@ The story is a little bit different here, to build the project, you don't even h
 | Config the first project | <1min | 15min ~ ?? |
 | Portablity | Awesome | Bad |
 | Version control | happlily commit script to git | better not commit the entire solution to git |
-| Update opencv version | slight modify, no pain | most like will not do it, too complicated and trivial |
+| Update opencv version | slight modify, no pain | one most likely will not do it, too complicated and trivial |
 | Corrupted project | delete and rebuild project in seconds | desperately want to recover the old settings |
 | Mood | :) | :( |

@@ -1,11 +1,17 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
 #-------------------- WHAT TO CONFIG ------------------------#
-SET(PROJECT_NAME "opencv-bootstrap")	# The project name
-SET(LINK_OPENCV_STATIC ON)	# Use static library or not
-SET(CUSTOM_OPENCV_DIR "D:\\Dev\\tmp\\opencv\\build") # where OpenCV reside in
-SET(USE_CUSTOM_OPENCV_DIR_IN_NIX OFF) # Most likely you don't need to specify it in *nix
+SET(PROJECT_NAME "opencv-bootstrap")	# The project name 工程名
+SET(LINK_OPENCV_STATIC ON)	# Use static library or not 是否链接静态运行库
+SET(CUSTOM_OPENCV_DIR "D:\\Dev\\tmp\\opencv\\build") # where OpenCV reside in OpenCV实际路径
+SET(USE_CUSTOM_OPENCV_DIR_IN_NIX OFF) # Most likely you don't need to specify it in *nix 
 #------------------------------------------------------------#
+
+
+
+
+
+
 
 #-------------------- NO MIDIFICATION ------------------------#
 PROJECT(${PROJECT_NAME})
