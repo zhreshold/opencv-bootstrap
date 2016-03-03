@@ -1,5 +1,7 @@
 # OpenCV-Bootstrap
-Set up OpenCV c++ project in a few seconds, good for Visual Studio in Windows/OS X/Linux, etc
+Set up OpenCV c++ project in a few seconds, good for Visual Studio projects in Windows/Mac OS X/Linux, etc
+
+[中文说明](https://github.com/ZhreShold/opencv-bootstrap/blob/master/%E4%B8%AD%E6%96%87%E8%AF%B4%E6%98%8E.md)
 
 ### What's new
 - Release version for windows is now available! One can use the tool without having to download and install CMake. [Download](https://github.com/ZhreShold/opencv-bootstrap/releases/download/v0.1-beta/opencv-bootstrap-0.1-beta.zip)
@@ -53,14 +55,14 @@ Open CMakeLists.txt using text editor in /path/to/project/build. There are only 
 By default, windows users have to change **CUSTOM_OPENCV_DIR**, linux users don't need to modify anything.
 - SET(PROJECT_NAME **"opencv-bootstrap"**) : Set up the project name which will later be created
 - SET(LINK_OPENCV_STATIC **ON**) : This option is only valid for windows users, if set to ON, will create static linked project using static libraries.
-- SET(CUSTOM_OPENCV_DIR **"D:\\Dev\\opencv\\build"**) : Where to look for opencv, most likely it is the extracted folder from a zip file downloaded from website for windows users(don't forget to include '/build' in path).
+- SET(CUSTOM_OPENCV_DIR **"D:\\Dev\\opencv\\build"**) : Where to look for opencv, most likely it is the extracted folder from a zip file downloaded from website for windows users(don't forget to include '/build' in path). You can have multiple copy of OpenCV with various versions, for example, d:/opencv2.4, d:/opencv3.0, just switch the path, and the linked OpenCV version is changed after running this script.
 - SET(USE_CUSTOM_OPENCV_DIR_IN_NIX **OFF**) : For non-windows only, turn this on will force to use the previous opencv directory, otherwise it will search the system default path such as "/usr/local/lib"
 
 #### Run the script
 ```
 # open a command line prompt
 $cd /path/to/project
-$cd /build
+$cd build
 
 # for VS project on windows
 $create_vs2013_project.bat
